@@ -1,0 +1,1 @@
+cmd_drivers/net/wireless/intersil/built-in.o :=  arm-linux-gnueabi-ld -EL    -r -o drivers/net/wireless/intersil/built-in.o drivers/net/wireless/intersil/hostap/built-in.o drivers/net/wireless/intersil/orinoco/built-in.o drivers/net/wireless/intersil/p54/built-in.o 

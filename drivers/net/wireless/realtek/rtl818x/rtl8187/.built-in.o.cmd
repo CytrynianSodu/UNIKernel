@@ -1,0 +1,1 @@
+cmd_drivers/net/wireless/realtek/rtl818x/rtl8187/built-in.o :=  arm-linux-gnueabi-ld -EL    -r -o drivers/net/wireless/realtek/rtl818x/rtl8187/built-in.o drivers/net/wireless/realtek/rtl818x/rtl8187/rtl8187.o 

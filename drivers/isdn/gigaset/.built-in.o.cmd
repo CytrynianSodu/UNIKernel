@@ -1,0 +1,1 @@
+cmd_drivers/isdn/gigaset/built-in.o :=  ld -m elf_x86_64   -r -o drivers/isdn/gigaset/built-in.o drivers/isdn/gigaset/gigaset.o drivers/isdn/gigaset/usb_gigaset.o drivers/isdn/gigaset/bas_gigaset.o drivers/isdn/gigaset/ser_gigaset.o 

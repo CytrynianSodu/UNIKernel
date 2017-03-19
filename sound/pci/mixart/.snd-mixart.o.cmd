@@ -1,0 +1,1 @@
+cmd_sound/pci/mixart/snd-mixart.o := arm-linux-gnueabi-ld -EL    -r -o sound/pci/mixart/snd-mixart.o sound/pci/mixart/mixart.o sound/pci/mixart/mixart_core.o sound/pci/mixart/mixart_hwdep.o sound/pci/mixart/mixart_mixer.o 

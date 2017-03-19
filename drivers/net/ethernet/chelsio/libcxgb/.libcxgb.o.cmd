@@ -1,0 +1,1 @@
+cmd_drivers/net/ethernet/chelsio/libcxgb/libcxgb.o := arm-linux-gnueabi-ld -EL    -r -o drivers/net/ethernet/chelsio/libcxgb/libcxgb.o drivers/net/ethernet/chelsio/libcxgb/libcxgb_ppm.o drivers/net/ethernet/chelsio/libcxgb/libcxgb_cm.o 

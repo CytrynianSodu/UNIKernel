@@ -1,0 +1,1 @@
+cmd_drivers/media/usb/cx231xx/built-in.o :=  ld -m elf_x86_64   -r -o drivers/media/usb/cx231xx/built-in.o drivers/media/usb/cx231xx/cx231xx.o drivers/media/usb/cx231xx/cx231xx-alsa.o drivers/media/usb/cx231xx/cx231xx-dvb.o 

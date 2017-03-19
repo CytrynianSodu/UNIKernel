@@ -1,0 +1,1 @@
+cmd_drivers/clk/mmp/built-in.o :=  arm-linux-gnueabi-ld -EL    -r -o drivers/clk/mmp/built-in.o drivers/clk/mmp/clk-apbc.o drivers/clk/mmp/clk-apmu.o drivers/clk/mmp/clk-frac.o drivers/clk/mmp/clk-mix.o drivers/clk/mmp/clk-gate.o drivers/clk/mmp/clk.o drivers/clk/mmp/clk-of-mmp2.o drivers/clk/mmp/clk-mmp2.o drivers/clk/mmp/clk-of-pxa1928.o 

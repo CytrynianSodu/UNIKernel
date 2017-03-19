@@ -1,0 +1,1 @@
+cmd_drivers/usb/host/built-in.o :=  ld -m elf_x86_64   -r -o drivers/usb/host/built-in.o drivers/usb/host/ehci-hcd.o drivers/usb/host/ohci-hcd.o drivers/usb/host/xhci-hcd.o drivers/usb/host/sl811-hcd.o drivers/usb/host/u132-hcd.o drivers/usb/host/hwa-hc.o 

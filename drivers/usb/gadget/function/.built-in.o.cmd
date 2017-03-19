@@ -1,0 +1,1 @@
+cmd_drivers/usb/gadget/function/built-in.o :=  ld -m elf_x86_64   -r -o drivers/usb/gadget/function/built-in.o drivers/usb/gadget/function/u_ether.o drivers/usb/gadget/function/usb_f_ecm.o drivers/usb/gadget/function/usb_f_ecm_subset.o drivers/usb/gadget/function/usb_f_rndis.o 

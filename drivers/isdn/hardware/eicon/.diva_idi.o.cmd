@@ -1,0 +1,1 @@
+cmd_drivers/isdn/hardware/eicon/diva_idi.o := arm-linux-gnueabi-ld -EL    -r -o drivers/isdn/hardware/eicon/diva_idi.o drivers/isdn/hardware/eicon/divasi.o drivers/isdn/hardware/eicon/idifunc.o drivers/isdn/hardware/eicon/um_idi.o drivers/isdn/hardware/eicon/dqueue.o 

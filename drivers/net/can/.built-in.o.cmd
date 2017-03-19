@@ -1,0 +1,1 @@
+cmd_drivers/net/can/built-in.o :=  ld -m elf_x86_64   -r -o drivers/net/can/built-in.o drivers/net/can/vcan.o drivers/net/can/slcan.o drivers/net/can/can-dev.o drivers/net/can/rcar/built-in.o drivers/net/can/spi/built-in.o drivers/net/can/usb/built-in.o drivers/net/can/softing/built-in.o drivers/net/can/sja1000/built-in.o 

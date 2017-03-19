@@ -1,0 +1,1 @@
+cmd_fs/overlayfs/overlay.o := ld -m elf_x86_64   -r -o fs/overlayfs/overlay.o fs/overlayfs/super.o fs/overlayfs/namei.o fs/overlayfs/util.o fs/overlayfs/inode.o fs/overlayfs/dir.o fs/overlayfs/readdir.o fs/overlayfs/copy_up.o 

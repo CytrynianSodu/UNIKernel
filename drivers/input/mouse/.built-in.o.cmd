@@ -1,0 +1,1 @@
+cmd_drivers/input/mouse/built-in.o :=  ld -m elf_x86_64   -r -o drivers/input/mouse/built-in.o drivers/input/mouse/appletouch.o drivers/input/mouse/bcm5974.o drivers/input/mouse/cyapatp.o drivers/input/mouse/elan_i2c.o drivers/input/mouse/psmouse.o drivers/input/mouse/sermouse.o drivers/input/mouse/synaptics_i2c.o drivers/input/mouse/synaptics_usb.o drivers/input/mouse/vsxxxaa.o 

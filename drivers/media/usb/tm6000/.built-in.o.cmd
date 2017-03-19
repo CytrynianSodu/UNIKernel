@@ -1,0 +1,1 @@
+cmd_drivers/media/usb/tm6000/built-in.o :=  ld -m elf_x86_64   -r -o drivers/media/usb/tm6000/built-in.o drivers/media/usb/tm6000/tm6000.o drivers/media/usb/tm6000/tm6000-alsa.o drivers/media/usb/tm6000/tm6000-dvb.o 

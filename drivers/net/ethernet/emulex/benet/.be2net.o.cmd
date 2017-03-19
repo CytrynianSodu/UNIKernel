@@ -1,0 +1,1 @@
+cmd_drivers/net/ethernet/emulex/benet/be2net.o := arm-linux-gnueabi-ld -EL    -r -o drivers/net/ethernet/emulex/benet/be2net.o drivers/net/ethernet/emulex/benet/be_main.o drivers/net/ethernet/emulex/benet/be_cmds.o drivers/net/ethernet/emulex/benet/be_ethtool.o drivers/net/ethernet/emulex/benet/be_roce.o 

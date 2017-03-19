@@ -1,0 +1,1 @@
+cmd_drivers/mmc/core/built-in.o :=  ld -m elf_x86_64   -r -o drivers/mmc/core/built-in.o drivers/mmc/core/mmc_core.o drivers/mmc/core/pwrseq_simple.o drivers/mmc/core/pwrseq_emmc.o drivers/mmc/core/mmc_block.o drivers/mmc/core/sdio_uart.o 

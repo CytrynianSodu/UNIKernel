@@ -1,0 +1,1 @@
+cmd_drivers/net/wireless/intel/iwlegacy/built-in.o :=  arm-linux-gnueabi-ld -EL    -r -o drivers/net/wireless/intel/iwlegacy/built-in.o drivers/net/wireless/intel/iwlegacy/iwlegacy.o drivers/net/wireless/intel/iwlegacy/iwl4965.o drivers/net/wireless/intel/iwlegacy/iwl3945.o 

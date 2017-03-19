@@ -1,0 +1,195 @@
+# 1 "arch/arm/boot/dts/pxa168-aspenite.dts"
+# 1 "<built-in>"
+# 1 "<command-line>"
+# 1 "arch/arm/boot/dts/pxa168-aspenite.dts"
+# 10 "arch/arm/boot/dts/pxa168-aspenite.dts"
+/dts-v1/;
+# 1 "arch/arm/boot/dts/pxa168.dtsi" 1
+# 10 "arch/arm/boot/dts/pxa168.dtsi"
+# 1 "arch/arm/boot/dts/skeleton.dtsi" 1
+# 11 "arch/arm/boot/dts/skeleton.dtsi"
+/ {
+ #address-cells = <1>;
+ #size-cells = <1>;
+ chosen { };
+ aliases { };
+ memory { device_type = "memory"; reg = <0 0>; };
+};
+# 11 "arch/arm/boot/dts/pxa168.dtsi" 2
+# 1 "./arch/arm/boot/dts/include/dt-bindings/clock/marvell,pxa168.h" 1
+# 12 "arch/arm/boot/dts/pxa168.dtsi" 2
+
+/ {
+ aliases {
+  serial0 = &uart1;
+  serial1 = &uart2;
+  serial2 = &uart3;
+  i2c0 = &twsi1;
+  i2c1 = &twsi2;
+ };
+
+ soc {
+  #address-cells = <1>;
+  #size-cells = <1>;
+  compatible = "simple-bus";
+  interrupt-parent = <&intc>;
+  ranges;
+
+  axi@d4200000 {
+   compatible = "mrvl,axi-bus", "simple-bus";
+   #address-cells = <1>;
+   #size-cells = <1>;
+   reg = <0xd4200000 0x00200000>;
+   ranges;
+
+   intc: interrupt-controller@d4282000 {
+    compatible = "mrvl,mmp-intc";
+    interrupt-controller;
+    #interrupt-cells = <1>;
+    reg = <0xd4282000 0x1000>;
+    mrvl,intc-nr-irqs = <64>;
+   };
+
+  };
+
+  apb@d4000000 {
+   compatible = "mrvl,apb-bus", "simple-bus";
+   #address-cells = <1>;
+   #size-cells = <1>;
+   reg = <0xd4000000 0x00200000>;
+   ranges;
+
+   timer0: timer@d4014000 {
+    compatible = "mrvl,mmp-timer";
+    reg = <0xd4014000 0x100>;
+    interrupts = <13>;
+   };
+
+   uart1: uart@d4017000 {
+    compatible = "mrvl,mmp-uart";
+    reg = <0xd4017000 0x1000>;
+    interrupts = <27>;
+    clocks = <&soc_clocks 71>;
+    resets = <&soc_clocks 71>;
+    status = "disabled";
+   };
+
+   uart2: uart@d4018000 {
+    compatible = "mrvl,mmp-uart";
+    reg = <0xd4018000 0x1000>;
+    interrupts = <28>;
+    clocks = <&soc_clocks 72>;
+    resets = <&soc_clocks 72>;
+    status = "disabled";
+   };
+
+   uart3: uart@d4026000 {
+    compatible = "mrvl,mmp-uart";
+    reg = <0xd4026000 0x1000>;
+    interrupts = <29>;
+    clocks = <&soc_clocks 73>;
+    resets = <&soc_clocks 73>;
+    status = "disabled";
+   };
+
+   gpio@d4019000 {
+    compatible = "marvell,mmp-gpio";
+    #address-cells = <1>;
+    #size-cells = <1>;
+    reg = <0xd4019000 0x1000>;
+    gpio-controller;
+    #gpio-cells = <2>;
+    interrupts = <49>;
+    clocks = <&soc_clocks 64>;
+    resets = <&soc_clocks 64>;
+    interrupt-names = "gpio_mux";
+    interrupt-controller;
+    #interrupt-cells = <1>;
+    ranges;
+
+    gcb0: gpio@d4019000 {
+     reg = <0xd4019000 0x4>;
+    };
+
+    gcb1: gpio@d4019004 {
+     reg = <0xd4019004 0x4>;
+    };
+
+    gcb2: gpio@d4019008 {
+     reg = <0xd4019008 0x4>;
+    };
+
+    gcb3: gpio@d4019100 {
+     reg = <0xd4019100 0x4>;
+    };
+   };
+
+   twsi1: i2c@d4011000 {
+    compatible = "mrvl,mmp-twsi";
+    reg = <0xd4011000 0x1000>;
+    interrupts = <7>;
+    clocks = <&soc_clocks 60>;
+    resets = <&soc_clocks 60>;
+    mrvl,i2c-fast-mode;
+    status = "disabled";
+   };
+
+   twsi2: i2c@d4025000 {
+    compatible = "mrvl,mmp-twsi";
+    reg = <0xd4025000 0x1000>;
+    interrupts = <58>;
+    clocks = <&soc_clocks 61>;
+    resets = <&soc_clocks 61>;
+    status = "disabled";
+   };
+
+   rtc: rtc@d4010000 {
+    compatible = "mrvl,mmp-rtc";
+    reg = <0xd4010000 0x1000>;
+    interrupts = <5 6>;
+    interrupt-names = "rtc 1Hz", "rtc alarm";
+    clocks = <&soc_clocks 66>;
+    resets = <&soc_clocks 66>;
+    status = "disabled";
+   };
+  };
+
+  soc_clocks: clocks{
+   compatible = "marvell,pxa168-clock";
+   reg = <0xd4050000 0x1000>,
+         <0xd4282800 0x400>,
+         <0xd4015000 0x1000>;
+   reg-names = "mpmu", "apmu", "apbc";
+   #clock-cells = <1>;
+   #reset-cells = <1>;
+  };
+ };
+};
+# 12 "arch/arm/boot/dts/pxa168-aspenite.dts" 2
+
+/ {
+ model = "Marvell PXA168 Aspenite Development Board";
+ compatible = "mrvl,pxa168-aspenite", "mrvl,pxa168";
+
+ chosen {
+  bootargs = "console=ttyS0,115200 root=/dev/nfs nfsroot=192.168.1.100:/nfsroot/ ip=192.168.1.101:192.168.1.100::255.255.255.0::eth0:on";
+ };
+
+ memory {
+  reg = <0x00000000 0x04000000>;
+ };
+
+ soc {
+  apb@d4000000 {
+   uart1: uart@d4017000 {
+    status = "okay";
+   };
+   twsi1: i2c@d4011000 {
+    status = "okay";
+   };
+   rtc: rtc@d4010000 {
+    status = "okay";
+   };
+  };
+ };
+};

@@ -1,0 +1,1 @@
+cmd_drivers/edac/edac_core.o := ld -m elf_x86_64   -r -o drivers/edac/edac_core.o drivers/edac/edac_mc.o drivers/edac/edac_device.o drivers/edac/edac_mc_sysfs.o drivers/edac/edac_module.o drivers/edac/edac_device_sysfs.o drivers/edac/wq.o 

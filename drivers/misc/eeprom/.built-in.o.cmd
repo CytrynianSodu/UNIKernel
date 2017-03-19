@@ -1,0 +1,1 @@
+cmd_drivers/misc/eeprom/built-in.o :=  ld -m elf_x86_64   -r -o drivers/misc/eeprom/built-in.o drivers/misc/eeprom/at24.o drivers/misc/eeprom/at25.o drivers/misc/eeprom/eeprom.o drivers/misc/eeprom/max6875.o drivers/misc/eeprom/eeprom_93cx6.o 

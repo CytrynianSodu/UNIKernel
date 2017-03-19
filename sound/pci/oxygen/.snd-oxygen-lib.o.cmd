@@ -1,0 +1,1 @@
+cmd_sound/pci/oxygen/snd-oxygen-lib.o := arm-linux-gnueabi-ld -EL    -r -o sound/pci/oxygen/snd-oxygen-lib.o sound/pci/oxygen/oxygen_io.o sound/pci/oxygen/oxygen_lib.o sound/pci/oxygen/oxygen_mixer.o sound/pci/oxygen/oxygen_pcm.o 

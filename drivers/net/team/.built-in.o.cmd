@@ -1,0 +1,1 @@
+cmd_drivers/net/team/built-in.o :=  arm-linux-gnueabi-ld -EL    -r -o drivers/net/team/built-in.o drivers/net/team/team.o drivers/net/team/team_mode_broadcast.o drivers/net/team/team_mode_roundrobin.o drivers/net/team/team_mode_random.o drivers/net/team/team_mode_activebackup.o drivers/net/team/team_mode_loadbalance.o 

@@ -1,0 +1,1 @@
+cmd_drivers/usb/atm/built-in.o :=  ld -m elf_x86_64   -r -o drivers/usb/atm/built-in.o drivers/usb/atm/cxacru.o drivers/usb/atm/speedtch.o drivers/usb/atm/ueagle-atm.o drivers/usb/atm/usbatm.o drivers/usb/atm/xusbatm.o 

@@ -1,0 +1,1 @@
+cmd_kernel/bpf/built-in.o :=  ld -m elf_x86_64   -r -o kernel/bpf/built-in.o kernel/bpf/core.o kernel/bpf/syscall.o kernel/bpf/verifier.o kernel/bpf/inode.o kernel/bpf/helpers.o kernel/bpf/hashtab.o kernel/bpf/arraymap.o kernel/bpf/percpu_freelist.o kernel/bpf/bpf_lru_list.o kernel/bpf/stackmap.o 

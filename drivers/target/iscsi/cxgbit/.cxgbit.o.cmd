@@ -1,0 +1,1 @@
+cmd_drivers/target/iscsi/cxgbit/cxgbit.o := arm-linux-gnueabi-ld -EL    -r -o drivers/target/iscsi/cxgbit/cxgbit.o drivers/target/iscsi/cxgbit/cxgbit_main.o drivers/target/iscsi/cxgbit/cxgbit_cm.o drivers/target/iscsi/cxgbit/cxgbit_target.o drivers/target/iscsi/cxgbit/cxgbit_ddp.o 

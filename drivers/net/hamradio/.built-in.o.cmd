@@ -1,0 +1,1 @@
+cmd_drivers/net/hamradio/built-in.o :=  ld -m elf_x86_64   -r -o drivers/net/hamradio/built-in.o drivers/net/hamradio/mkiss.o drivers/net/hamradio/6pack.o drivers/net/hamradio/yam.o drivers/net/hamradio/bpqether.o drivers/net/hamradio/baycom_ser_fdx.o drivers/net/hamradio/hdlcdrv.o drivers/net/hamradio/baycom_ser_hdx.o drivers/net/hamradio/baycom_par.o 

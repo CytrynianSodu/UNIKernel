@@ -1,0 +1,1 @@
+cmd_drivers/media/i2c/built-in.o :=  ld -m elf_x86_64   -r -o drivers/media/i2c/built-in.o drivers/media/i2c/msp3400.o drivers/media/i2c/cx25840/built-in.o drivers/media/i2c/soc_camera/built-in.o drivers/media/i2c/saa7115.o drivers/media/i2c/tvp5150.o drivers/media/i2c/cs53l32a.o drivers/media/i2c/wm8775.o drivers/media/i2c/mt9v011.o drivers/media/i2c/ir-kbd-i2c.o 

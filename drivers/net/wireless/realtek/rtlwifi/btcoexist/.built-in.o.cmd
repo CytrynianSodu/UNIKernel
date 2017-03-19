@@ -1,0 +1,1 @@
+cmd_drivers/net/wireless/realtek/rtlwifi/btcoexist/built-in.o :=  arm-linux-gnueabi-ld -EL    -r -o drivers/net/wireless/realtek/rtlwifi/btcoexist/built-in.o drivers/net/wireless/realtek/rtlwifi/btcoexist/btcoexist.o 

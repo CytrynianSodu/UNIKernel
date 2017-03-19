@@ -1,0 +1,1 @@
+cmd_drivers/scsi/be2iscsi/be2iscsi.o := arm-linux-gnueabi-ld -EL    -r -o drivers/scsi/be2iscsi/be2iscsi.o drivers/scsi/be2iscsi/be_iscsi.o drivers/scsi/be2iscsi/be_main.o drivers/scsi/be2iscsi/be_mgmt.o drivers/scsi/be2iscsi/be_cmds.o 

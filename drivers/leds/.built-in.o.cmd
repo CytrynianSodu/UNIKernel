@@ -1,0 +1,1 @@
+cmd_drivers/leds/built-in.o :=  ld -m elf_x86_64   -r -o drivers/leds/built-in.o drivers/leds/led-core.o drivers/leds/led-class.o drivers/leds/led-triggers.o drivers/leds/leds-bd2802.o drivers/leds/leds-lp3944.o drivers/leds/leds-pca955x.o drivers/leds/leds-lt3593.o drivers/leds/leds-menf21bmc.o drivers/leds/leds-dac124s085.o drivers/leds/trigger/built-in.o 

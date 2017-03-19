@@ -1,0 +1,1 @@
+cmd_drivers/media/pci/saa7134/built-in.o :=  arm-linux-gnueabi-ld -EL    -r -o drivers/media/pci/saa7134/built-in.o drivers/media/pci/saa7134/saa7134.o drivers/media/pci/saa7134/saa7134-empress.o drivers/media/pci/saa7134/saa7134-alsa.o drivers/media/pci/saa7134/saa7134-dvb.o 

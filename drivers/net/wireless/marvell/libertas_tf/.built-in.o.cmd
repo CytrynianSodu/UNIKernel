@@ -1,0 +1,1 @@
+cmd_drivers/net/wireless/marvell/libertas_tf/built-in.o :=  ld -m elf_x86_64   -r -o drivers/net/wireless/marvell/libertas_tf/built-in.o drivers/net/wireless/marvell/libertas_tf/libertas_tf.o drivers/net/wireless/marvell/libertas_tf/libertas_tf_usb.o 

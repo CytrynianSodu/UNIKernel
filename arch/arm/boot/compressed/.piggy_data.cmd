@@ -1,0 +1,1 @@
+cmd_arch/arm/boot/compressed/piggy_data := (cat arch/arm/boot/compressed/../Image | sh ./scripts/xz_wrap.sh && printf \\374\\252\\103\\002) > arch/arm/boot/compressed/piggy_data || (rm -f arch/arm/boot/compressed/piggy_data ; false)

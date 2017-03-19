@@ -1,0 +1,1 @@
+cmd_drivers/block/built-in.o :=  ld -m elf_x86_64   -r -o drivers/block/built-in.o drivers/block/brd.o drivers/block/loop.o drivers/block/pktcdvd.o drivers/block/osdblk.o drivers/block/nbd.o drivers/block/drbd/built-in.o drivers/block/rbd.o drivers/block/null_blk.o drivers/block/zram/built-in.o 

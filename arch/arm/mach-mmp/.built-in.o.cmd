@@ -1,0 +1,1 @@
+cmd_arch/arm/mach-mmp/built-in.o :=  arm-linux-gnueabi-ld -EL    -r -o arch/arm/mach-mmp/built-in.o arch/arm/mach-mmp/common.o arch/arm/mach-mmp/devices.o arch/arm/mach-mmp/time.o arch/arm/mach-mmp/mmp2.o arch/arm/mach-mmp/pm-mmp2.o arch/arm/mach-mmp/mmp2-dt.o 

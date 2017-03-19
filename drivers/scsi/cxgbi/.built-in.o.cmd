@@ -1,0 +1,1 @@
+cmd_drivers/scsi/cxgbi/built-in.o :=  arm-linux-gnueabi-ld -EL    -r -o drivers/scsi/cxgbi/built-in.o drivers/scsi/cxgbi/libcxgbi.o drivers/scsi/cxgbi/cxgb3i/built-in.o drivers/scsi/cxgbi/cxgb4i/built-in.o 

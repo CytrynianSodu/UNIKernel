@@ -1,0 +1,1 @@
+cmd_drivers/net/wireless/ath/ath9k/built-in.o :=  arm-linux-gnueabi-ld -EL    -r -o drivers/net/wireless/ath/ath9k/built-in.o drivers/net/wireless/ath/ath9k/ath9k.o drivers/net/wireless/ath/ath9k/ath9k_hw.o drivers/net/wireless/ath/ath9k/ath9k_common.o drivers/net/wireless/ath/ath9k/ath9k_htc.o 

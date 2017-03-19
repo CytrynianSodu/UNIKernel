@@ -1,0 +1,1 @@
+cmd_drivers/iio/common/hid-sensors/built-in.o :=  ld -m elf_x86_64   -r -o drivers/iio/common/hid-sensors/built-in.o drivers/iio/common/hid-sensors/hid-sensor-iio-common.o drivers/iio/common/hid-sensors/hid-sensor-trigger.o 

@@ -1,0 +1,1 @@
+cmd_drivers/infiniband/core/built-in.o :=  arm-linux-gnueabi-ld -EL    -r -o drivers/infiniband/core/built-in.o drivers/infiniband/core/ib_core.o drivers/infiniband/core/ib_cm.o drivers/infiniband/core/iw_cm.o drivers/infiniband/core/rdma_cm.o drivers/infiniband/core/ib_umad.o drivers/infiniband/core/ib_uverbs.o drivers/infiniband/core/ib_ucm.o drivers/infiniband/core/rdma_ucm.o 

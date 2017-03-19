@@ -1,0 +1,1 @@
+cmd_drivers/tty/ipwireless/ipwireless.o := arm-linux-gnueabi-ld -EL    -r -o drivers/tty/ipwireless/ipwireless.o drivers/tty/ipwireless/hardware.o drivers/tty/ipwireless/main.o drivers/tty/ipwireless/network.o drivers/tty/ipwireless/tty.o 

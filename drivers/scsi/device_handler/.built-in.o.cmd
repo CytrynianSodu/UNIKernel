@@ -1,0 +1,1 @@
+cmd_drivers/scsi/device_handler/built-in.o :=  arm-linux-gnueabi-ld -EL    -r -o drivers/scsi/device_handler/built-in.o drivers/scsi/device_handler/scsi_dh_rdac.o drivers/scsi/device_handler/scsi_dh_hp_sw.o drivers/scsi/device_handler/scsi_dh_emc.o drivers/scsi/device_handler/scsi_dh_alua.o 

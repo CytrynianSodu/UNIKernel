@@ -1,0 +1,1 @@
+cmd_drivers/input/serio/built-in.o :=  ld -m elf_x86_64   -r -o drivers/input/serio/built-in.o drivers/input/serio/serio.o drivers/input/serio/i8042.o drivers/input/serio/parkbd.o drivers/input/serio/serport.o drivers/input/serio/libps2.o drivers/input/serio/serio_raw.o drivers/input/serio/altera_ps2.o 

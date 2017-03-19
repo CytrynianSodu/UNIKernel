@@ -1,0 +1,1 @@
+cmd_drivers/watchdog/built-in.o :=  ld -m elf_x86_64   -r -o drivers/watchdog/built-in.o drivers/watchdog/watchdog.o drivers/watchdog/pcwd_usb.o drivers/watchdog/kempld_wdt.o drivers/watchdog/softdog.o drivers/watchdog/menf21bmc_wdt.o 

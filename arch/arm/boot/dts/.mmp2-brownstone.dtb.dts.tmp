@@ -1,0 +1,449 @@
+# 1 "arch/arm/boot/dts/mmp2-brownstone.dts"
+# 1 "<built-in>"
+# 1 "<command-line>"
+# 1 "arch/arm/boot/dts/mmp2-brownstone.dts"
+# 10 "arch/arm/boot/dts/mmp2-brownstone.dts"
+/dts-v1/;
+# 1 "arch/arm/boot/dts/mmp2.dtsi" 1
+# 10 "arch/arm/boot/dts/mmp2.dtsi"
+# 1 "arch/arm/boot/dts/skeleton.dtsi" 1
+# 11 "arch/arm/boot/dts/skeleton.dtsi"
+/ {
+ #address-cells = <1>;
+ #size-cells = <1>;
+ chosen { };
+ aliases { };
+ memory { device_type = "memory"; reg = <0 0>; };
+};
+# 11 "arch/arm/boot/dts/mmp2.dtsi" 2
+# 1 "./arch/arm/boot/dts/include/dt-bindings/clock/marvell,mmp2.h" 1
+# 12 "arch/arm/boot/dts/mmp2.dtsi" 2
+
+/ {
+ aliases {
+  serial0 = &uart1;
+  serial1 = &uart2;
+  serial2 = &uart3;
+  serial3 = &uart4;
+  i2c0 = &twsi1;
+  i2c1 = &twsi2;
+ };
+
+ soc {
+  #address-cells = <1>;
+  #size-cells = <1>;
+  compatible = "simple-bus";
+  interrupt-parent = <&intc>;
+  ranges;
+
+  L2: l2-cache {
+   compatible = "marvell,tauros2-cache";
+   marvell,tauros2-cache-features = <0x3>;
+  };
+
+  axi@d4200000 {
+   compatible = "mrvl,axi-bus", "simple-bus";
+   #address-cells = <1>;
+   #size-cells = <1>;
+   reg = <0xd4200000 0x00200000>;
+   ranges;
+
+   intc: interrupt-controller@d4282000 {
+    compatible = "mrvl,mmp2-intc";
+    interrupt-controller;
+    #interrupt-cells = <1>;
+    reg = <0xd4282000 0x1000>;
+    mrvl,intc-nr-irqs = <64>;
+   };
+
+   intcmux4: interrupt-controller@d4282150 {
+    compatible = "mrvl,mmp2-mux-intc";
+    interrupts = <4>;
+    interrupt-controller;
+    #interrupt-cells = <1>;
+    reg = <0x150 0x4>, <0x168 0x4>;
+    reg-names = "mux status", "mux mask";
+    mrvl,intc-nr-irqs = <2>;
+   };
+
+   intcmux5: interrupt-controller@d4282154 {
+    compatible = "mrvl,mmp2-mux-intc";
+    interrupts = <5>;
+    interrupt-controller;
+    #interrupt-cells = <1>;
+    reg = <0x154 0x4>, <0x16c 0x4>;
+    reg-names = "mux status", "mux mask";
+    mrvl,intc-nr-irqs = <2>;
+    mrvl,clr-mfp-irq = <1>;
+   };
+
+   intcmux9: interrupt-controller@d4282180 {
+    compatible = "mrvl,mmp2-mux-intc";
+    interrupts = <9>;
+    interrupt-controller;
+    #interrupt-cells = <1>;
+    reg = <0x180 0x4>, <0x17c 0x4>;
+    reg-names = "mux status", "mux mask";
+    mrvl,intc-nr-irqs = <3>;
+   };
+
+   intcmux17: interrupt-controller@d4282158 {
+    compatible = "mrvl,mmp2-mux-intc";
+    interrupts = <17>;
+    interrupt-controller;
+    #interrupt-cells = <1>;
+    reg = <0x158 0x4>, <0x170 0x4>;
+    reg-names = "mux status", "mux mask";
+    mrvl,intc-nr-irqs = <5>;
+   };
+
+   intcmux35: interrupt-controller@d428215c {
+    compatible = "mrvl,mmp2-mux-intc";
+    interrupts = <35>;
+    interrupt-controller;
+    #interrupt-cells = <1>;
+    reg = <0x15c 0x4>, <0x174 0x4>;
+    reg-names = "mux status", "mux mask";
+    mrvl,intc-nr-irqs = <15>;
+   };
+
+   intcmux51: interrupt-controller@d4282160 {
+    compatible = "mrvl,mmp2-mux-intc";
+    interrupts = <51>;
+    interrupt-controller;
+    #interrupt-cells = <1>;
+    reg = <0x160 0x4>, <0x178 0x4>;
+    reg-names = "mux status", "mux mask";
+    mrvl,intc-nr-irqs = <2>;
+   };
+
+   intcmux55: interrupt-controller@d4282188 {
+    compatible = "mrvl,mmp2-mux-intc";
+    interrupts = <55>;
+    interrupt-controller;
+    #interrupt-cells = <1>;
+    reg = <0x188 0x4>, <0x184 0x4>;
+    reg-names = "mux status", "mux mask";
+    mrvl,intc-nr-irqs = <2>;
+   };
+  };
+
+  apb@d4000000 {
+   compatible = "mrvl,apb-bus", "simple-bus";
+   #address-cells = <1>;
+   #size-cells = <1>;
+   reg = <0xd4000000 0x00200000>;
+   ranges;
+
+   timer0: timer@d4014000 {
+    compatible = "mrvl,mmp-timer";
+    reg = <0xd4014000 0x100>;
+    interrupts = <13>;
+   };
+
+   uart1: uart@d4030000 {
+    compatible = "mrvl,mmp-uart";
+    reg = <0xd4030000 0x1000>;
+    interrupts = <27>;
+    clocks = <&soc_clocks 73>;
+    resets = <&soc_clocks 73>;
+    status = "disabled";
+   };
+
+   uart2: uart@d4017000 {
+    compatible = "mrvl,mmp-uart";
+    reg = <0xd4017000 0x1000>;
+    interrupts = <28>;
+    clocks = <&soc_clocks 74>;
+    resets = <&soc_clocks 74>;
+    status = "disabled";
+   };
+
+   uart3: uart@d4018000 {
+    compatible = "mrvl,mmp-uart";
+    reg = <0xd4018000 0x1000>;
+    interrupts = <24>;
+    clocks = <&soc_clocks 75>;
+    resets = <&soc_clocks 75>;
+    status = "disabled";
+   };
+
+   uart4: uart@d4016000 {
+    compatible = "mrvl,mmp-uart";
+    reg = <0xd4016000 0x1000>;
+    interrupts = <46>;
+    clocks = <&soc_clocks 76>;
+    resets = <&soc_clocks 76>;
+    status = "disabled";
+   };
+
+   gpio@d4019000 {
+    compatible = "marvell,mmp2-gpio";
+    #address-cells = <1>;
+    #size-cells = <1>;
+    reg = <0xd4019000 0x1000>;
+    gpio-controller;
+    #gpio-cells = <2>;
+    interrupts = <49>;
+    interrupt-names = "gpio_mux";
+    clocks = <&soc_clocks 66>;
+    resets = <&soc_clocks 66>;
+    interrupt-controller;
+    #interrupt-cells = <1>;
+    ranges;
+
+    gcb0: gpio@d4019000 {
+     reg = <0xd4019000 0x4>;
+    };
+
+    gcb1: gpio@d4019004 {
+     reg = <0xd4019004 0x4>;
+    };
+
+    gcb2: gpio@d4019008 {
+     reg = <0xd4019008 0x4>;
+    };
+
+    gcb3: gpio@d4019100 {
+     reg = <0xd4019100 0x4>;
+    };
+
+    gcb4: gpio@d4019104 {
+     reg = <0xd4019104 0x4>;
+    };
+
+    gcb5: gpio@d4019108 {
+     reg = <0xd4019108 0x4>;
+    };
+   };
+
+   twsi1: i2c@d4011000 {
+    compatible = "mrvl,mmp-twsi";
+    reg = <0xd4011000 0x1000>;
+    interrupts = <7>;
+    clocks = <&soc_clocks 60>;
+    resets = <&soc_clocks 60>;
+    #address-cells = <1>;
+    #size-cells = <0>;
+    mrvl,i2c-fast-mode;
+    status = "disabled";
+   };
+
+   twsi2: i2c@d4025000 {
+    compatible = "mrvl,mmp-twsi";
+    reg = <0xd4025000 0x1000>;
+    interrupts = <58>;
+    clocks = <&soc_clocks 61>;
+    resets = <&soc_clocks 61>;
+    status = "disabled";
+   };
+
+   rtc: rtc@d4010000 {
+    compatible = "mrvl,mmp-rtc";
+    reg = <0xd4010000 0x1000>;
+    interrupts = <1 0>;
+    interrupt-names = "rtc 1Hz", "rtc alarm";
+    interrupt-parent = <&intcmux5>;
+    clocks = <&soc_clocks 68>;
+    resets = <&soc_clocks 68>;
+    status = "disabled";
+   };
+  };
+
+  soc_clocks: clocks{
+   compatible = "marvell,mmp2-clock";
+   reg = <0xd4050000 0x1000>,
+         <0xd4282800 0x400>,
+         <0xd4015000 0x1000>;
+   reg-names = "mpmu", "apmu", "apbc";
+   #clock-cells = <1>;
+   #reset-cells = <1>;
+  };
+ };
+};
+# 12 "arch/arm/boot/dts/mmp2-brownstone.dts" 2
+
+/ {
+ model = "Marvell MMP2 Brownstone Development Board";
+ compatible = "mrvl,mmp2-brownstone", "mrvl,mmp2";
+
+ chosen {
+  bootargs = "console=ttyS2,38400 root=/dev/nfs nfsroot=192.168.1.100:/nfsroot/ ip=192.168.1.101:192.168.1.100::255.255.255.0::eth0:on";
+ };
+
+ memory {
+  reg = <0x00000000 0x08000000>;
+ };
+
+ soc {
+  apb@d4000000 {
+   uart3: uart@d4018000 {
+    status = "okay";
+   };
+   twsi1: i2c@d4011000 {
+    status = "okay";
+    pmic: max8925@3c {
+     compatible = "maxium,max8925";
+     reg = <0x3c>;
+     interrupts = <1>;
+     interrupt-parent = <&intcmux4>;
+     interrupt-controller;
+     #interrupt-cells = <1>;
+     maxim,tsc-irq = <0>;
+
+     regulators {
+      SDV1 {
+       regulator-min-microvolt = <637500>;
+       regulator-max-microvolt = <1425000>;
+       regulator-boot-on;
+       regulator-always-on;
+      };
+      SDV2 {
+       regulator-min-microvolt = <650000>;
+       regulator-max-microvolt = <2225000>;
+       regulator-boot-on;
+       regulator-always-on;
+      };
+      SDV3 {
+       regulator-min-microvolt = <750000>;
+       regulator-max-microvolt = <3900000>;
+       regulator-boot-on;
+       regulator-always-on;
+      };
+      LDO1 {
+       regulator-min-microvolt = <750000>;
+       regulator-max-microvolt = <3900000>;
+       regulator-boot-on;
+       regulator-always-on;
+      };
+      LDO2 {
+       regulator-min-microvolt = <650000>;
+       regulator-max-microvolt = <2250000>;
+       regulator-boot-on;
+       regulator-always-on;
+      };
+      LDO3 {
+       regulator-min-microvolt = <650000>;
+       regulator-max-microvolt = <2250000>;
+       regulator-boot-on;
+       regulator-always-on;
+      };
+      LDO4 {
+       regulator-min-microvolt = <750000>;
+       regulator-max-microvolt = <3900000>;
+       regulator-boot-on;
+       regulator-always-on;
+      };
+      LDO5 {
+       regulator-min-microvolt = <750000>;
+       regulator-max-microvolt = <3900000>;
+       regulator-boot-on;
+       regulator-always-on;
+      };
+      LDO6 {
+       regulator-min-microvolt = <750000>;
+       regulator-max-microvolt = <3900000>;
+       regulator-boot-on;
+       regulator-always-on;
+      };
+      LDO7 {
+       regulator-min-microvolt = <750000>;
+       regulator-max-microvolt = <3900000>;
+       regulator-boot-on;
+       regulator-always-on;
+      };
+      LDO8 {
+       regulator-min-microvolt = <750000>;
+       regulator-max-microvolt = <3900000>;
+       regulator-boot-on;
+       regulator-always-on;
+      };
+      LDO9 {
+       regulator-min-microvolt = <750000>;
+       regulator-max-microvolt = <3900000>;
+       regulator-boot-on;
+       regulator-always-on;
+      };
+      LDO10 {
+       regulator-min-microvolt = <750000>;
+       regulator-max-microvolt = <3900000>;
+      };
+      LDO11 {
+       regulator-min-microvolt = <750000>;
+       regulator-max-microvolt = <3900000>;
+       regulator-boot-on;
+       regulator-always-on;
+      };
+      LDO12 {
+       regulator-min-microvolt = <750000>;
+       regulator-max-microvolt = <3900000>;
+       regulator-boot-on;
+       regulator-always-on;
+      };
+      LDO13 {
+       regulator-min-microvolt = <750000>;
+       regulator-max-microvolt = <3900000>;
+       regulator-boot-on;
+       regulator-always-on;
+      };
+      LDO14 {
+       regulator-min-microvolt = <750000>;
+       regulator-max-microvolt = <3900000>;
+       regulator-boot-on;
+       regulator-always-on;
+      };
+      LDO15 {
+       regulator-min-microvolt = <750000>;
+       regulator-max-microvolt = <3900000>;
+       regulator-boot-on;
+       regulator-always-on;
+      };
+      LDO16 {
+       regulator-min-microvolt = <750000>;
+       regulator-max-microvolt = <3900000>;
+       regulator-boot-on;
+       regulator-always-on;
+      };
+      LDO17 {
+       regulator-min-microvolt = <650000>;
+       regulator-max-microvolt = <2250000>;
+       regulator-boot-on;
+       regulator-always-on;
+      };
+      LDO18 {
+       regulator-min-microvolt = <650000>;
+       regulator-max-microvolt = <2250000>;
+       regulator-boot-on;
+       regulator-always-on;
+      };
+      LDO19 {
+       regulator-min-microvolt = <750000>;
+       regulator-max-microvolt = <3900000>;
+       regulator-boot-on;
+       regulator-always-on;
+      };
+      LDO20 {
+       regulator-min-microvolt = <750000>;
+       regulator-max-microvolt = <3900000>;
+       regulator-boot-on;
+       regulator-always-on;
+      };
+     };
+     backlight {
+      maxim,max8925-dual-string = <0>;
+     };
+     charger {
+      batt-detect = <0>;
+      topoff-threshold = <1>;
+      fast-charge = <7>;
+      no-temp-support = <0>;
+      no-insert-detect = <0>;
+     };
+    };
+   };
+   rtc: rtc@d4010000 {
+    status = "okay";
+   };
+  };
+ };
+};

@@ -1,0 +1,1 @@
+cmd_drivers/input/mouse/elan_i2c.o := ld -m elf_x86_64   -r -o drivers/input/mouse/elan_i2c.o drivers/input/mouse/elan_i2c_core.o drivers/input/mouse/elan_i2c_i2c.o drivers/input/mouse/elan_i2c_smbus.o 

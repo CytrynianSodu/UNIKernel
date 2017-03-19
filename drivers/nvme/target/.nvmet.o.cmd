@@ -1,0 +1,1 @@
+cmd_drivers/nvme/target/nvmet.o := arm-linux-gnueabi-ld -EL    -r -o drivers/nvme/target/nvmet.o drivers/nvme/target/core.o drivers/nvme/target/configfs.o drivers/nvme/target/admin-cmd.o drivers/nvme/target/io-cmd.o drivers/nvme/target/fabrics-cmd.o drivers/nvme/target/discovery.o 

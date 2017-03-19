@@ -1,0 +1,1 @@
+cmd_sound/pci/au88x0/snd-au8830.o := arm-linux-gnueabi-ld -EL    -r -o sound/pci/au88x0/snd-au8830.o sound/pci/au88x0/au8830.o 

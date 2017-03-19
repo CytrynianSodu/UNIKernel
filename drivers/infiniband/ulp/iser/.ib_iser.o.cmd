@@ -1,0 +1,1 @@
+cmd_drivers/infiniband/ulp/iser/ib_iser.o := arm-linux-gnueabi-ld -EL    -r -o drivers/infiniband/ulp/iser/ib_iser.o drivers/infiniband/ulp/iser/iser_verbs.o drivers/infiniband/ulp/iser/iser_initiator.o drivers/infiniband/ulp/iser/iser_memory.o drivers/infiniband/ulp/iser/iscsi_iser.o 

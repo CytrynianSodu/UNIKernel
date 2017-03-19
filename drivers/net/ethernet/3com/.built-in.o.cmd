@@ -1,0 +1,1 @@
+cmd_drivers/net/ethernet/3com/built-in.o :=  arm-linux-gnueabi-ld -EL    -r -o drivers/net/ethernet/3com/built-in.o drivers/net/ethernet/3com/3c589_cs.o drivers/net/ethernet/3com/3c574_cs.o drivers/net/ethernet/3com/3c59x.o drivers/net/ethernet/3com/typhoon.o 

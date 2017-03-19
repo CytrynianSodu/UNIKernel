@@ -1,0 +1,1 @@
+cmd_drivers/net/wan/built-in.o :=  ld -m elf_x86_64   -r -o drivers/net/wan/built-in.o drivers/net/wan/hdlc.o drivers/net/wan/hdlc_raw.o drivers/net/wan/hdlc_raw_eth.o drivers/net/wan/hdlc_cisco.o drivers/net/wan/hdlc_fr.o drivers/net/wan/hdlc_ppp.o drivers/net/wan/dlci.o 

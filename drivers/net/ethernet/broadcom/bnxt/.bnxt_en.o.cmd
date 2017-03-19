@@ -1,0 +1,1 @@
+cmd_drivers/net/ethernet/broadcom/bnxt/bnxt_en.o := arm-linux-gnueabi-ld -EL    -r -o drivers/net/ethernet/broadcom/bnxt/bnxt_en.o drivers/net/ethernet/broadcom/bnxt/bnxt.o drivers/net/ethernet/broadcom/bnxt/bnxt_sriov.o drivers/net/ethernet/broadcom/bnxt/bnxt_ethtool.o drivers/net/ethernet/broadcom/bnxt/bnxt_dcb.o drivers/net/ethernet/broadcom/bnxt/bnxt_ulp.o 

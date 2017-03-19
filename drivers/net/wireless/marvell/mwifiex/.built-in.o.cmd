@@ -1,0 +1,1 @@
+cmd_drivers/net/wireless/marvell/mwifiex/built-in.o :=  ld -m elf_x86_64   -r -o drivers/net/wireless/marvell/mwifiex/built-in.o drivers/net/wireless/marvell/mwifiex/mwifiex.o drivers/net/wireless/marvell/mwifiex/mwifiex_sdio.o drivers/net/wireless/marvell/mwifiex/mwifiex_usb.o 

@@ -1,0 +1,1 @@
+cmd_drivers/iio/light/built-in.o :=  ld -m elf_x86_64   -r -o drivers/iio/light/built-in.o drivers/iio/light/bh1780.o drivers/iio/light/hid-sensor-als.o drivers/iio/light/hid-sensor-prox.o drivers/iio/light/isl29018.o drivers/iio/light/jsa1212.o drivers/iio/light/tsl2563.o drivers/iio/light/tsl2583.o 

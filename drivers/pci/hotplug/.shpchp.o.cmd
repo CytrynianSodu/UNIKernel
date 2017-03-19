@@ -1,0 +1,1 @@
+cmd_drivers/pci/hotplug/shpchp.o := arm-linux-gnueabi-ld -EL    -r -o drivers/pci/hotplug/shpchp.o drivers/pci/hotplug/shpchp_core.o drivers/pci/hotplug/shpchp_ctrl.o drivers/pci/hotplug/shpchp_pci.o drivers/pci/hotplug/shpchp_sysfs.o drivers/pci/hotplug/shpchp_hpc.o 

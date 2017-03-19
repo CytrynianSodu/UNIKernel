@@ -1,0 +1,1 @@
+cmd_drivers/net/wireless/ath/ath10k/built-in.o :=  arm-linux-gnueabi-ld -EL    -r -o drivers/net/wireless/ath/ath10k/built-in.o drivers/net/wireless/ath/ath10k/ath10k_core.o drivers/net/wireless/ath/ath10k/ath10k_pci.o 

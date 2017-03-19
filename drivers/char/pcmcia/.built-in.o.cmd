@@ -1,0 +1,1 @@
+cmd_drivers/char/pcmcia/built-in.o :=  arm-linux-gnueabi-ld -EL    -r -o drivers/char/pcmcia/built-in.o drivers/char/pcmcia/synclink_cs.o drivers/char/pcmcia/cm4000_cs.o drivers/char/pcmcia/cm4040_cs.o 

@@ -1,0 +1,1 @@
+cmd_drivers/media/pci/ivtv/built-in.o :=  arm-linux-gnueabi-ld -EL    -r -o drivers/media/pci/ivtv/built-in.o drivers/media/pci/ivtv/ivtv.o drivers/media/pci/ivtv/ivtv-alsa.o drivers/media/pci/ivtv/ivtvfb.o 

@@ -1,0 +1,1 @@
+cmd_sound/drivers/vx/snd-vx-lib.o := arm-linux-gnueabi-ld -EL    -r -o sound/drivers/vx/snd-vx-lib.o sound/drivers/vx/vx_core.o sound/drivers/vx/vx_hwdep.o sound/drivers/vx/vx_pcm.o sound/drivers/vx/vx_mixer.o sound/drivers/vx/vx_cmd.o sound/drivers/vx/vx_uer.o 

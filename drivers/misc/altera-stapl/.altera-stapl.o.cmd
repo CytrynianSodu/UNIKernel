@@ -1,0 +1,1 @@
+cmd_drivers/misc/altera-stapl/altera-stapl.o := ld -m elf_x86_64   -r -o drivers/misc/altera-stapl/altera-stapl.o drivers/misc/altera-stapl/altera-lpt.o drivers/misc/altera-stapl/altera-jtag.o drivers/misc/altera-stapl/altera-comp.o drivers/misc/altera-stapl/altera.o 

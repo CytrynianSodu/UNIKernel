@@ -1,0 +1,1 @@
+cmd_drivers/w1/slaves/built-in.o :=  ld -m elf_x86_64   -r -o drivers/w1/slaves/built-in.o drivers/w1/slaves/w1_therm.o drivers/w1/slaves/w1_smem.o drivers/w1/slaves/w1_ds2431.o drivers/w1/slaves/w1_ds2433.o drivers/w1/slaves/w1_bq27000.o 

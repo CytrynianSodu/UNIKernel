@@ -1,0 +1,1 @@
+cmd_drivers/infiniband/ulp/built-in.o :=  arm-linux-gnueabi-ld -EL    -r -o drivers/infiniband/ulp/built-in.o drivers/infiniband/ulp/ipoib/built-in.o drivers/infiniband/ulp/srp/built-in.o drivers/infiniband/ulp/srpt/built-in.o drivers/infiniband/ulp/iser/built-in.o drivers/infiniband/ulp/isert/built-in.o 

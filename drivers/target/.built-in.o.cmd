@@ -1,0 +1,1 @@
+cmd_drivers/target/built-in.o :=  ld -m elf_x86_64   -r -o drivers/target/built-in.o drivers/target/target_core_mod.o drivers/target/target_core_iblock.o drivers/target/target_core_file.o drivers/target/target_core_pscsi.o drivers/target/target_core_user.o drivers/target/loopback/built-in.o drivers/target/iscsi/built-in.o 

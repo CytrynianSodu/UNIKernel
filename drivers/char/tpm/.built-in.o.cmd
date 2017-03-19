@@ -1,0 +1,1 @@
+cmd_drivers/char/tpm/built-in.o :=  ld -m elf_x86_64   -r -o drivers/char/tpm/built-in.o drivers/char/tpm/tpm.o drivers/char/tpm/tpm_tis_core.o drivers/char/tpm/tpm_tis.o drivers/char/tpm/tpm_i2c_atmel.o drivers/char/tpm/tpm_i2c_infineon.o drivers/char/tpm/tpm_i2c_nuvoton.o drivers/char/tpm/tpm_atmel.o drivers/char/tpm/st33zp24/built-in.o 

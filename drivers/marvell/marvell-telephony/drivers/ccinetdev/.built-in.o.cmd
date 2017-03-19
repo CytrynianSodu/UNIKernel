@@ -1,0 +1,1 @@
+cmd_drivers/marvell/marvell-telephony/drivers/ccinetdev/built-in.o :=  rm -f drivers/marvell/marvell-telephony/drivers/ccinetdev/built-in.o; arm-linux-gnueabi-ar rcsD drivers/marvell/marvell-telephony/drivers/ccinetdev/built-in.o

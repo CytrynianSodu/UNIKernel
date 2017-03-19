@@ -1,0 +1,1 @@
+cmd_net/bluetooth/built-in.o :=  ld -m elf_x86_64   -r -o net/bluetooth/built-in.o net/bluetooth/bluetooth.o net/bluetooth/rfcomm/built-in.o net/bluetooth/bnep/built-in.o net/bluetooth/cmtp/built-in.o net/bluetooth/hidp/built-in.o net/bluetooth/bluetooth_6lowpan.o 

@@ -1,0 +1,163 @@
+cmd_arch/arm/boot/compressed/decompress.o := arm-linux-gnueabi-gcc -Wp,-MD,arch/arm/boot/compressed/.decompress.o.d  -nostdinc -isystem /usr/lib/gcc-cross/arm-linux-gnueabi/6/include -I./arch/arm/include -I./arch/arm/include/generated/uapi -I./arch/arm/include/generated  -I./include -I./arch/arm/include/uapi -I./include/uapi -I./include/generated/uapi -include ./include/linux/kconfig.h -D__KERNEL__ -mlittle-endian -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -Werror-implicit-function-declaration -Wno-format-security -std=gnu89 -fno-PIE -fno-dwarf2-cfi-asm -fno-omit-frame-pointer -mapcs -mno-sched-prolog -fno-ipa-sra -mabi=apcs-gnu -mno-thumb-interwork -marm -D__LINUX_ARM_ARCH__=7 -march=armv7-a -msoft-float -Uarm -fno-delete-null-pointer-checks -Wno-frame-address -O2 --param=allow-store-data-races=0 -Wframe-larger-than=2048 -fstack-protector-strong -Wno-unused-but-set-variable -Wno-unused-const-variable -fno-omit-frame-pointer -fno-optimize-sibling-calls -fno-var-tracking-assignments -g -Wdeclaration-after-statement -Wno-pointer-sign -fno-strict-overflow -fconserve-stack -Werror=implicit-int -Werror=strict-prototypes -Werror=date-time -Werror=incompatible-pointer-types -DCC_HAVE_ASM_GOTO -DDISABLE_BRANCH_PROFILING -fpic -mno-single-pic-base -fno-builtin -Iarch/arm/boot/compressed    -DKBUILD_BASENAME='"decompress"'  -DKBUILD_MODNAME='"decompress"' -c -o arch/arm/boot/compressed/decompress.o arch/arm/boot/compressed/decompress.c
+
+source_arch/arm/boot/compressed/decompress.o := arch/arm/boot/compressed/decompress.c
+
+deps_arch/arm/boot/compressed/decompress.o := \
+    $(wildcard include/config/kernel/gzip.h) \
+    $(wildcard include/config/kernel/lzo.h) \
+    $(wildcard include/config/kernel/lzma.h) \
+    $(wildcard include/config/kernel/xz.h) \
+    $(wildcard include/config/kernel/lz4.h) \
+  include/linux/compiler.h \
+    $(wildcard include/config/sparse/rcu/pointer.h) \
+    $(wildcard include/config/trace/branch/profiling.h) \
+    $(wildcard include/config/profile/all/branches.h) \
+    $(wildcard include/config/kasan.h) \
+    $(wildcard include/config/enable/must/check.h) \
+    $(wildcard include/config/enable/warn/deprecated.h) \
+    $(wildcard include/config/kprobes.h) \
+  include/linux/compiler-gcc.h \
+    $(wildcard include/config/arch/supports/optimized/inlining.h) \
+    $(wildcard include/config/optimize/inlining.h) \
+    $(wildcard include/config/gcov/kernel.h) \
+    $(wildcard include/config/arch/use/builtin/bswap.h) \
+  include/uapi/linux/types.h \
+  arch/arm/include/uapi/asm/types.h \
+  include/asm-generic/int-ll64.h \
+  include/uapi/asm-generic/int-ll64.h \
+  arch/arm/include/generated/asm/bitsperlong.h \
+  include/asm-generic/bitsperlong.h \
+    $(wildcard include/config/64bit.h) \
+  include/uapi/asm-generic/bitsperlong.h \
+  include/uapi/linux/posix_types.h \
+  include/linux/stddef.h \
+  include/uapi/linux/stddef.h \
+  arch/arm/include/uapi/asm/posix_types.h \
+  include/uapi/asm-generic/posix_types.h \
+  include/linux/types.h \
+    $(wildcard include/config/have/uid16.h) \
+    $(wildcard include/config/uid16.h) \
+    $(wildcard include/config/lbdaf.h) \
+    $(wildcard include/config/arch/dma/addr/t/64bit.h) \
+    $(wildcard include/config/phys/addr/t/64bit.h) \
+  include/linux/linkage.h \
+  include/linux/stringify.h \
+  include/linux/export.h \
+    $(wildcard include/config/have/underscore/symbol/prefix.h) \
+    $(wildcard include/config/modules.h) \
+    $(wildcard include/config/modversions.h) \
+    $(wildcard include/config/module/rel/crcs.h) \
+    $(wildcard include/config/trim/unused/ksyms.h) \
+    $(wildcard include/config/unused/symbols.h) \
+  arch/arm/include/asm/linkage.h \
+  arch/arm/include/asm/string.h \
+  arch/arm/boot/compressed/../../../../lib/decompress_unxz.c \
+    $(wildcard include/config/x86.h) \
+    $(wildcard include/config/ppc.h) \
+    $(wildcard include/config/arm.h) \
+    $(wildcard include/config/ia64.h) \
+    $(wildcard include/config/sparc.h) \
+  include/linux/decompress/mm.h \
+  arch/arm/boot/compressed/../../../../lib/xz/xz_private.h \
+    $(wildcard include/config/xz/dec/x86.h) \
+    $(wildcard include/config/xz/dec/powerpc.h) \
+    $(wildcard include/config/xz/dec/ia64.h) \
+    $(wildcard include/config/xz/dec/arm.h) \
+    $(wildcard include/config/xz/dec/armthumb.h) \
+    $(wildcard include/config/xz/dec/sparc.h) \
+  include/linux/xz.h \
+  include/linux/kernel.h \
+    $(wildcard include/config/preempt/voluntary.h) \
+    $(wildcard include/config/debug/atomic/sleep.h) \
+    $(wildcard include/config/mmu.h) \
+    $(wildcard include/config/prove/locking.h) \
+    $(wildcard include/config/panic/timeout.h) \
+    $(wildcard include/config/tracing.h) \
+    $(wildcard include/config/ftrace/mcount/record.h) \
+  /usr/lib/gcc-cross/arm-linux-gnueabi/6/include/stdarg.h \
+  include/linux/bitops.h \
+  arch/arm/include/asm/bitops.h \
+    $(wildcard include/config/smp.h) \
+  include/linux/irqflags.h \
+    $(wildcard include/config/trace/irqflags.h) \
+    $(wildcard include/config/irqsoff/tracer.h) \
+    $(wildcard include/config/preempt/tracer.h) \
+    $(wildcard include/config/trace/irqflags/support.h) \
+  include/linux/typecheck.h \
+  arch/arm/include/asm/irqflags.h \
+    $(wildcard include/config/cpu/v7m.h) \
+  arch/arm/include/asm/ptrace.h \
+    $(wildcard include/config/arm/thumb.h) \
+    $(wildcard include/config/thumb2/kernel.h) \
+  arch/arm/include/uapi/asm/ptrace.h \
+    $(wildcard include/config/cpu/endian/be8.h) \
+  arch/arm/include/asm/hwcap.h \
+  arch/arm/include/uapi/asm/hwcap.h \
+  include/asm-generic/irqflags.h \
+  arch/arm/include/asm/barrier.h \
+    $(wildcard include/config/cpu/32v6k.h) \
+    $(wildcard include/config/cpu/xsc3.h) \
+    $(wildcard include/config/cpu/fa526.h) \
+    $(wildcard include/config/arm/heavy/mb.h) \
+    $(wildcard include/config/arm/dma/mem/bufferable.h) \
+  include/asm-generic/barrier.h \
+  include/asm-generic/bitops/non-atomic.h \
+  include/asm-generic/bitops/fls64.h \
+  include/asm-generic/bitops/sched.h \
+  include/asm-generic/bitops/hweight.h \
+  include/asm-generic/bitops/arch_hweight.h \
+  include/asm-generic/bitops/const_hweight.h \
+  include/asm-generic/bitops/lock.h \
+  include/asm-generic/bitops/le.h \
+  arch/arm/include/uapi/asm/byteorder.h \
+  include/linux/byteorder/little_endian.h \
+  include/uapi/linux/byteorder/little_endian.h \
+  include/linux/swab.h \
+  include/uapi/linux/swab.h \
+  arch/arm/include/asm/swab.h \
+  arch/arm/include/uapi/asm/swab.h \
+  include/linux/byteorder/generic.h \
+  include/asm-generic/bitops/ext2-atomic-setbit.h \
+  include/linux/log2.h \
+    $(wildcard include/config/arch/has/ilog2/u32.h) \
+    $(wildcard include/config/arch/has/ilog2/u64.h) \
+  include/linux/printk.h \
+    $(wildcard include/config/message/loglevel/default.h) \
+    $(wildcard include/config/console/loglevel/default.h) \
+    $(wildcard include/config/early/printk.h) \
+    $(wildcard include/config/printk/nmi.h) \
+    $(wildcard include/config/printk.h) \
+    $(wildcard include/config/dynamic/debug.h) \
+  include/linux/init.h \
+    $(wildcard include/config/debug/rodata.h) \
+    $(wildcard include/config/debug/set/module/ronx.h) \
+  include/linux/kern_levels.h \
+  include/linux/cache.h \
+    $(wildcard include/config/arch/has/cache/line/size.h) \
+  include/uapi/linux/kernel.h \
+  include/uapi/linux/sysinfo.h \
+  arch/arm/include/asm/cache.h \
+    $(wildcard include/config/arm/l1/cache/shift.h) \
+    $(wildcard include/config/aeabi.h) \
+  include/linux/dynamic_debug.h \
+    $(wildcard include/config/jump/label.h) \
+  include/linux/jump_label.h \
+  arch/arm/include/asm/jump_label.h \
+  arch/arm/include/asm/unified.h \
+    $(wildcard include/config/arm/asm/unified.h) \
+  arch/arm/include/generated/asm/unaligned.h \
+  include/asm-generic/unaligned.h \
+    $(wildcard include/config/have/efficient/unaligned/access.h) \
+  include/linux/unaligned/access_ok.h \
+  include/linux/unaligned/generic.h \
+  arch/arm/boot/compressed/../../../../lib/xz/xz_crc32.c \
+  arch/arm/boot/compressed/../../../../lib/xz/xz_private.h \
+  arch/arm/boot/compressed/../../../../lib/xz/xz_dec_stream.c \
+  arch/arm/boot/compressed/../../../../lib/xz/xz_stream.h \
+  arch/arm/boot/compressed/../../../../lib/xz/xz_dec_lzma2.c \
+  arch/arm/boot/compressed/../../../../lib/xz/xz_lzma2.h \
+  arch/arm/boot/compressed/../../../../lib/xz/xz_dec_bcj.c \
+
+arch/arm/boot/compressed/decompress.o: $(deps_arch/arm/boot/compressed/decompress.o)
+
+$(deps_arch/arm/boot/compressed/decompress.o):

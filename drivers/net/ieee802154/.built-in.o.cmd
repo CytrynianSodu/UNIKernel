@@ -1,0 +1,1 @@
+cmd_drivers/net/ieee802154/built-in.o :=  ld -m elf_x86_64   -r -o drivers/net/ieee802154/built-in.o drivers/net/ieee802154/fakelb.o drivers/net/ieee802154/at86rf230.o drivers/net/ieee802154/mrf24j40.o drivers/net/ieee802154/cc2520.o drivers/net/ieee802154/atusb.o drivers/net/ieee802154/adf7242.o 

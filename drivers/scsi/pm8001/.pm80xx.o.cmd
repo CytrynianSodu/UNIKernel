@@ -1,0 +1,1 @@
+cmd_drivers/scsi/pm8001/pm80xx.o := arm-linux-gnueabi-ld -EL    -r -o drivers/scsi/pm8001/pm80xx.o drivers/scsi/pm8001/pm8001_init.o drivers/scsi/pm8001/pm8001_sas.o drivers/scsi/pm8001/pm8001_ctl.o drivers/scsi/pm8001/pm8001_hwi.o drivers/scsi/pm8001/pm80xx_hwi.o 

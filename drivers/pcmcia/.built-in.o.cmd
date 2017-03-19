@@ -1,0 +1,1 @@
+cmd_drivers/pcmcia/built-in.o :=  arm-linux-gnueabi-ld -EL    -r -o drivers/pcmcia/built-in.o drivers/pcmcia/pcmcia_core.o drivers/pcmcia/pcmcia.o drivers/pcmcia/pcmcia_rsrc.o drivers/pcmcia/yenta_socket.o drivers/pcmcia/pd6729.o drivers/pcmcia/i82092.o 

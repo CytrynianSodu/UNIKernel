@@ -1,0 +1,1 @@
+cmd_arch/x86/entry/vsyscall/built-in.o :=  ld -m elf_x86_64   -r -o arch/x86/entry/vsyscall/built-in.o arch/x86/entry/vsyscall/vsyscall_gtod.o arch/x86/entry/vsyscall/vsyscall_64.o arch/x86/entry/vsyscall/vsyscall_emu_64.o 

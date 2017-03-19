@@ -1,0 +1,1 @@
+cmd_drivers/isdn/hardware/eicon/divadidd.o := arm-linux-gnueabi-ld -EL    -r -o drivers/isdn/hardware/eicon/divadidd.o drivers/isdn/hardware/eicon/diva_didd.o drivers/isdn/hardware/eicon/diddfunc.o drivers/isdn/hardware/eicon/dadapter.o 

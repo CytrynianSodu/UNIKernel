@@ -1,0 +1,1 @@
+cmd_drivers/staging/media/lirc/built-in.o :=  ld -m elf_x86_64   -r -o drivers/staging/media/lirc/built-in.o drivers/staging/media/lirc/lirc_imon.o drivers/staging/media/lirc/lirc_sasem.o drivers/staging/media/lirc/lirc_sir.o drivers/staging/media/lirc/lirc_zilog.o 

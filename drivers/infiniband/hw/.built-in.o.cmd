@@ -1,0 +1,1 @@
+cmd_drivers/infiniband/hw/built-in.o :=  arm-linux-gnueabi-ld -EL    -r -o drivers/infiniband/hw/built-in.o drivers/infiniband/hw/mthca/built-in.o drivers/infiniband/hw/cxgb3/built-in.o drivers/infiniband/hw/cxgb4/built-in.o drivers/infiniband/hw/mlx4/built-in.o drivers/infiniband/hw/mlx5/built-in.o drivers/infiniband/hw/nes/built-in.o drivers/infiniband/hw/ocrdma/built-in.o 

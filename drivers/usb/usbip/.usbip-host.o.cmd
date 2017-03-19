@@ -1,0 +1,1 @@
+cmd_drivers/usb/usbip/usbip-host.o := ld -m elf_x86_64   -r -o drivers/usb/usbip/usbip-host.o drivers/usb/usbip/stub_dev.o drivers/usb/usbip/stub_main.o drivers/usb/usbip/stub_rx.o drivers/usb/usbip/stub_tx.o 

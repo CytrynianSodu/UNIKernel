@@ -1,0 +1,1 @@
+cmd_drivers/net/wireless/intel/iwlegacy/iwl4965.o := arm-linux-gnueabi-ld -EL    -r -o drivers/net/wireless/intel/iwlegacy/iwl4965.o drivers/net/wireless/intel/iwlegacy/4965.o drivers/net/wireless/intel/iwlegacy/4965-mac.o drivers/net/wireless/intel/iwlegacy/4965-rs.o drivers/net/wireless/intel/iwlegacy/4965-calib.o 

@@ -1,0 +1,1 @@
+cmd_drivers/mtd/devices/built-in.o :=  ld -m elf_x86_64   -r -o drivers/mtd/devices/built-in.o drivers/mtd/devices/slram.o drivers/mtd/devices/phram.o drivers/mtd/devices/mtdram.o drivers/mtd/devices/block2mtd.o drivers/mtd/devices/mtd_dataflash.o drivers/mtd/devices/m25p80.o drivers/mtd/devices/sst25l.o 

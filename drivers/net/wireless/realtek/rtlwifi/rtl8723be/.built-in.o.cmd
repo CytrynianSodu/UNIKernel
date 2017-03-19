@@ -1,0 +1,1 @@
+cmd_drivers/net/wireless/realtek/rtlwifi/rtl8723be/built-in.o :=  arm-linux-gnueabi-ld -EL    -r -o drivers/net/wireless/realtek/rtlwifi/rtl8723be/built-in.o drivers/net/wireless/realtek/rtlwifi/rtl8723be/rtl8723be.o 

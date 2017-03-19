@@ -1,0 +1,1 @@
+cmd_drivers/input/mouse/cyapatp.o := ld -m elf_x86_64   -r -o drivers/input/mouse/cyapatp.o drivers/input/mouse/cyapa.o drivers/input/mouse/cyapa_gen3.o drivers/input/mouse/cyapa_gen5.o drivers/input/mouse/cyapa_gen6.o 

@@ -1,0 +1,1 @@
+cmd_drivers/net/wireless/realtek/rtlwifi/btcoexist/btcoexist.o := arm-linux-gnueabi-ld -EL    -r -o drivers/net/wireless/realtek/rtlwifi/btcoexist/btcoexist.o drivers/net/wireless/realtek/rtlwifi/btcoexist/halbtc8723b2ant.o drivers/net/wireless/realtek/rtlwifi/btcoexist/halbtcoutsrc.o drivers/net/wireless/realtek/rtlwifi/btcoexist/rtl_btc.o 

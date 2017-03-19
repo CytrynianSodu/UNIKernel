@@ -1,0 +1,1 @@
+cmd_drivers/iio/accel/built-in.o :=  ld -m elf_x86_64   -r -o drivers/iio/accel/built-in.o drivers/iio/accel/bmc150-accel-core.o drivers/iio/accel/bmc150-accel-i2c.o drivers/iio/accel/bmc150-accel-spi.o drivers/iio/accel/hid-sensor-accel-3d.o drivers/iio/accel/kxcjk-1013.o drivers/iio/accel/mma9551_core.o drivers/iio/accel/mma9551.o drivers/iio/accel/mma9553.o 
