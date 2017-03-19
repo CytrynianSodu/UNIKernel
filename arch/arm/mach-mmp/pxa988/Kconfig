@@ -4,7 +4,7 @@ menuconfig CONFIG_MMP988
 	help
 	  Support for Marvell's PXA168/PXA998(MMP) and MMP2 processor line.
 
-if ARCH_MMP
+if CONFIG_MMP988
 
 menu "PXA988 options"
 
