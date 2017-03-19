@@ -1,0 +1,12 @@
+obj-$(CONFIG_TOUCHSCREEN_FT5306)	+= ft5306_touch.o
+obj-$(CONFIG_TOUCHSCREEN_GT9XX) 	+= gt9xx_touch.o gt9xx_update.o goodix_tool.o
+obj-$(CONFIG_TOUCHSCREEN_SYNAPTICS_I2C_RMI)	+= synaptics_i2c_rmi.o
+obj-$(CONFIG_TOUCHSCREEN_SYNAPTICS_DSX_I2C)	+= synaptics_dsx_i2c.o
+obj-$(CONFIG_TOUCHSCREEN_VNC)		+= vnc_touch.o
+obj-$(CONFIG_TOUCHSCREEN_MMS136_TS) += mfs_gpio_i2c.o mms100_isp.o mms100_cfg_update.o mms136_ts.o
+obj-$(CONFIG_TOUCHSCREEN_BT531_TS) += bt531_ts.o
+obj-$(CONFIG_TOUCHSCREEN_BT532_TS) += bt532_ts.o
+obj-$(CONFIG_TOUCHSCREEN_BT432_TS) += bt432_ts.o
+obj-$(CONFIG_TOUCHSCREEN_MXT224S)	+= mxts.o
+obj-$(CONFIG_TOUCHSCREEN_CYPRESS_TMA46X)	+= cyttsp4_core.o	cyttsp4_i2c.o  cyttsp4_bus.o  cyttsp4_mtb.o  cyttsp4_mt_common.o cyttsp4_btn.o  cyttsp4_device_access.o cyttsp4_loader.o
+obj-$(CONFIG_TOUCHSCREEN_MELFAS_MMS144)		+= MMS144/
