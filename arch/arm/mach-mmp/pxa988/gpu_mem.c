@@ -24,14 +24,6 @@
 #include <mach/cputype.h>
 #endif
 
-#ifdef CONFIG_ARCH_988
-#include <mach/cputype.h>
-#endif
-
-#if CONFIG_ARCH_PXA
-#include <mach/hardware.h>
-#endif
-
 #define DEVICE_NAME_GC	   "galcore"
 
 #define MAKE_GPU_PARAM_X(plat, irq, regBase, regSize, memSize, memBase) \

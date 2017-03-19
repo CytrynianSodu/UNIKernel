@@ -26,10 +26,6 @@
 #include <mach/hardware.h>
 #endif
 
-#ifdef CONFIG_ARCH_988
-#include <mach/cputype.h>
-#endif
-
 #include <plat/mfp.h>
 
 #ifdef CONFIG_SEC_GPIO_DVS

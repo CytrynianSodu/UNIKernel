@@ -8,7 +8,15 @@ menuconfig ARCH_MMP
 	help
 	  Support for Marvell's PXA168/PXA910(MMP) and MMP2 processor line.
 
-if ARCH_MMP
+menuconfig CONFIG_MMPORG
+	bool "Marvell PXA168/910/MMP2"
+	depends on ARCH_MMP
+	help
+	  Support for Marvell's PXA168/PXA910(MMP) and MMP2 processor line.
+
+
+
+if CONFIG_MMPORG
 
 menu "Marvell PXA168/910/MMP2 Implementations"
 

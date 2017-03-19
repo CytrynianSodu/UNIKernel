@@ -13,7 +13,7 @@ config PXA_PANIC_FLUSH
 
 config PXA_32KTIMER
 	bool "PXA 32K Timer"
-	depends on (ARCH_PXA || ARCH_MMP || ARCH_988)
+	depends on (ARCH_PXA || ARCH_MMP)
 	default n
 	help
 	  32KHz timer support for PXA27x and PXA3xx/9xx Processor
@@ -21,7 +21,7 @@ config PXA_32KTIMER
 config DUMP_REGS
 	bool
 	default y
-	depends on (ARCH_PXA || ARCH_MMP || ARCH_988)
+	depends on (ARCH_PXA || ARCH_MMP)
 	help
 	  Dump soc registers, stack, and possible functions in the stack
 

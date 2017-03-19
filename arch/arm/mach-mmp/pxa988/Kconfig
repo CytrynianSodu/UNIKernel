@@ -1,14 +1,10 @@
-menuconfig ARCH_988
+menuconfig CONFIG_MMP988
 	bool "Marvell PXA98X"
-	depends on ARCH_MULTI_V5 || ARCH_MULTI_V7
-	select GPIO_PXA
-	select GPIOLIB
-	select PINCTRL
-	select PLAT_PXA
+	depends on ARCH_MMP
 	help
-	  Support for Marvell's PXA168/PXA910(MMP) and MMP2 processor line.
+	  Support for Marvell's PXA168/PXA998(MMP) and MMP2 processor line.
 
-if ARCH_988
+if ARCH_MMP
 
 menu "PXA988 options"
 

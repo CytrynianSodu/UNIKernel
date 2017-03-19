@@ -13,7 +13,7 @@ config ION_TEGRA
 
 config ION_PXA
        tristate "ION for PXA"
-       depends on ION && (ARCH_PXA || ARCH_MMP || ARCH_988)
+       depends on ION && (ARCH_PXA || ARCH_MMP)
        default y
        help
          Choose this option to enable ION on PXA.

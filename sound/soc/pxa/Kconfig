@@ -9,7 +9,7 @@ config SND_PXA2XX_SOC
 
 config SND_MMP_SOC
 	bool "Soc Audio for Marvell MMP chips"
-	depends on ARCH_MMP || ARCH_988
+	depends on ARCH_MMP
 	select MMP_SRAM
 	select SND_SOC_GENERIC_DMAENGINE_PCM
 	select SND_ARM
@@ -228,7 +228,7 @@ config SND_SOC_MMP3ASOC
 
 config SND_PXA988_SOC
 	tristate "SoC Audio for the Marvell PXA988 chip"
-	depends on ARCH_MMP || ARCH_988 && SND
+	depends on ARCH_MMP && SND
 	select SND_PCM
 	help
 	  Say Y or M if you want to add support for codecs attached to
@@ -238,7 +238,7 @@ config SND_PXA988_SOC
 
 config SND_SOC_EMEI_DKB
 	bool "SoC Audio support for EMEI DKB"
-	depends on ARCH_MMP || ARCH_988 && SND
+	depends on ARCH_MMP && SND
 	depends on MACH_EMEIDKB || MACH_ARUBA_TD || MACH_HELANDKB ||MACH_WARUBA || MACH_HARRISON || MACH_HELANDKB || MACH_HELANDELOS || MACH_WILCOX || MACH_CS02 || MFD_88PM805 || MACH_BAFFIN || MACH_CT01  || MACH_CS05 || MACH_BAFFINQ || MACH_GOLDEN || MACH_GOYA || MACH_DEGAS
 	select SND_PCM
 	select PXA_SSP
